@@ -37,6 +37,6 @@ Current validation tools often introduce significant overhead, making them unsui
 
 # Acknowledgements
 
-We acknowledge the contributions of the GA4GH Cloud Work Stream for defining the foundational standards that necessitate this tooling.
+This project builds upon the open standards developed by the Global Alliance for Genomics and Health (GA4GH). We appreciate the community's work in defining and maintaining these schemas.
 
 # References
