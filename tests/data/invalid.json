@@ -1,0 +1,22 @@
+{
+    "id": "PROBAND-002",
+    "subject": {
+        "id": "PATIENT-Y-100",
+        "sex": "NOT_A_VALID_ENUM",
+        "taxonomy": {
+            "id": "NCBITaxon:9606"
+        }
+    },
+    "phenotypicFeatures": [
+        {
+            "type": {
+                "id": 12345,
+                "label": "Hypercalcemia"
+            }
+        }
+    ],
+    "metaData": {
+        "created": "2026-02-01T10:00:00Z",
+        "phenopacketSchemaVersion": "2.0"
+    }
+}
