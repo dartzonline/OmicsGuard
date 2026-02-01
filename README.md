@@ -1,12 +1,9 @@
-[![PyPI version](https://badge.fury.io/py/omicsguard.svg)](https://badge.fury.io/py/omicsguard)
-[![Downloads](https://static.pepy.tech/badge/omicsguard)](https://pepy.tech/project/omicsguard)
-
 # OmicsGuard
 
-[![Python application](https://github.com/dartzonline/OmicsGuard/actions/workflows/python-app.yml/badge.svg)](https://github.com/dartzonline/OmicsGuard/actions/workflows/python-app.yml)
+[![Python application](https://github.com/dartzonline/OmicsGuard/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/dartzonline/OmicsGuard/actions/workflows/python-app.yml)
 [![PyPI version](https://badge.fury.io/py/omicsguard.svg)](https://badge.fury.io/py/omicsguard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Lines of Code](https://tokei.rs/b1/github/dartzonline/OmicsGuard)](https://github.com/dartzonline/OmicsGuard)
+[![Lines of Code](https://img.shields.io/tokei/lines/github/dartzonline/OmicsGuard)](https://github.com/dartzonline/OmicsGuard)
 
 
 **OmicsGuard** is a lightweight, serverless-ready metadata validator designed for modern bioinformatics workflows. It ensures "Schema-on-Write" integrity for GA4GH standards (like Phenopackets) while allowing flexible organizational extensions and custom business logic.
@@ -24,7 +21,7 @@
 
 ## Installation
 
-## Installation
+
 
 You can install OmicsGuard from PyPI or directly from the source.
 
