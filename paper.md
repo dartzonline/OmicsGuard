@@ -20,15 +20,13 @@ bibliography: paper.bib
 
 # Summary
 
-In the era of petabyte-scale genomics, data integrity is a critical bottleneck. As organizations move toward cloud-native architectures, the enforcement of metadata standards becomes increasingly difficult. While the Global Alliance for Genomics and Health (GA4GH) provides rigorous standards for metadata—such as the *Expmeta* or *Phenopackets* schemas—enforcing these standards in automated, high-throughput cloud pipelines remains a challenge. Existing validation tools are often monolithic, difficult to integrate into ephemeral compute environments (like AWS Lambda or Azure Functions), or lack support for dynamic schema retrieval.
-
-`OmicsGuard` is a lightweight, Python-based validation engine designed specifically for these high-throughput cloud environments. It allows bioinformatics engineers and data stewards to enforce "Schema-on-Write," ensuring that no genomic data enters a data lake without strictly adhering to community standards.
+`OmicsGuard` is a lightweight Python library designed to validate genomic metadata against GA4GH standards in serverless and high-throughput cloud environments. While standards such as *Expmeta* or *Phenopackets* define the structure of genomic data, implementing these checks in production pipelines often requires complex dependencies or heavy frameworks. `OmicsGuard` solves this by providing a minimal-footprint validation engine that supports both local file and remote URL schema retrieval. It is specifically optimized for "Schema-on-Write" architectures, where metadata must be validated in real-time before ingestion into a data lake.
 
 # Statement of Need
 
-Genomic data generation is outpacing Moore's Law. For large agricultural and healthcare enterprises, the ingestion of sequencing data occurs at a massive scale—often involving millions of files per month. A common failure mode in these "Data Lakes" is metadata drift: files are uploaded with missing or incorrectly formatted attributes (e.g., missing `library_prep` details or invalid `sample_id` formats). This renders the data unsearchable and hinders reproducibility.
+In large-scale bioinformatics operations, metadata consistency is the primary factor determining data usability. When ingesting thousands of sequencing files daily, manual validation is impossible, and downstream analysis fails if attributes like `library_prep` or `sample_id` are missing or malformed.
 
-Most current validation solutions require heavy dependencies or persistent servers. `OmicsGuard` addresses this by providing a zero-dependency (standard library + `jsonschema`) solution that has a near-instant cold-start time, making it ideal for Serverless architectures. It supports validation against local file paths and remote URLs, allowing organizations to maintain a "Single Source of Truth" for their schemas. By integrating `OmicsGuard` into CI/CD pipelines or cloud triggers, organizations can automate the quality assurance of genomic datasets @rehm2021ga4gh.
+Current validation tools often introduce significant overhead, making them unsuitable for ephemeral compute environments like AWS Lambda or Google Cloud Functions. For example, many existing validators require large container images or long initialization times ("cold starts") due to heavy dependencies. `OmicsGuard` addresses this gap by relying solely on the standard library and `jsonschema`. This design ensures sub-second runtime performance, allows for easy integration into existing CI/CD or Airflow pipelines, and enables organizations to enforce strict compliance with community standards @rehm2021ga4gh without refactoring their infrastructure.
 
 # Features
 
