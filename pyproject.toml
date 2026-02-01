@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "A Serverless-Ready Metadata Validator for GA4GH Genomic Standards"
 readme = "README.md"
 authors = [
-  { name="Anil Bodepudi", email="anilsai.b@gmail.com" },
+  { name="Dart", email="dart@example.com" },
 ]
 classifiers = [
     "Programming Language :: Python :: 3",

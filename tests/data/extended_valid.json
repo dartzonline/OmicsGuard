@@ -1,0 +1,10 @@
+{
+    "id": "subject-1",
+    "hospital_id": "HOSP-A123",
+    "dataset_id": "dataset-1",
+    "meta_data": {
+        "created": "2026-02-01T00:00:00Z",
+        "created_by": "user"
+    },
+    "sex": "MALE"
+}

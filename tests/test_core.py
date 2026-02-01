@@ -1,7 +1,7 @@
 import unittest
 import json
 import os
-from omicsguard.validator import validate_metadata, ValidationError
+from omicsguard.validator import validate_metadata, ValidationError, MetadataValidator
 from omicsguard.loader import SchemaLoader
 
 class TestOmicsGuard(unittest.TestCase):
@@ -35,6 +35,23 @@ class TestOmicsGuard(unittest.TestCase):
         schema = loader.load_schema(self.schema_path)
         self.assertIsInstance(schema, dict)
         self.assertEqual(schema['properties']['id']['type'], 'string')
+
+    def test_plugin_validation(self):
+        # Create a dummy plugin function
+        def dummy_plugin(data):
+            if "bad_field" in data:
+                return ["Found bad field"]
+            return []
+        
+        validator = MetadataValidator(schema_dict=self.schema)
+        # Manually register the plugin function for testing without file loading
+        validator.plugin_functions = [dummy_plugin]
+        
+        data = self.valid_data.copy()
+        data["bad_field"] = True
+        
+        errors = validator.validate(data)
+        self.assertTrue(any("Found bad field" in e.message for e in errors))
 
 if __name__ == '__main__':
     unittest.main()

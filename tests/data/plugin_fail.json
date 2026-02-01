@@ -1,10 +1,10 @@
 {
-    "id": "PROBAND-001",
+    "id": "PATIENT-001",
     "subject": {
         "id": "PATIENT-X-99",
         "timeAtLastEncounter": {
             "age": {
-                "iso8601duration": "P35Y"
+                "iso8601duration": "P35M"
             }
         },
         "sex": "MALE",
