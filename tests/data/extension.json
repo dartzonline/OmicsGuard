@@ -1,0 +1,11 @@
+{
+    "properties": {
+        "hospital_id": {
+            "type": "string",
+            "description": "Internal Hospital ID"
+        }
+    },
+    "required": [
+        "hospital_id"
+    ]
+}

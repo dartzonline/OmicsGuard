@@ -8,11 +8,11 @@ tags:
   - GA4GH
   - cloud-native
 authors:
-  - name: Anil Bodepudi
-    orcid: 0009-0001-3816-6757
+  - name: Dart
+    orcid: 0000-0000-0000-0000
     affiliation: 1
 affiliations:
- - name: Corteva Agriscience, United States
+ - name: Independent Researcher
    index: 1
 date: 1 February 2026
 bibliography: paper.bib
