@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "omicsguard"
-version = "0.1.0"
+version = "0.1.1"
 description = "A Serverless-Ready Metadata Validator for GA4GH Genomic Standards"
 readme = "README.md"
 authors = [
