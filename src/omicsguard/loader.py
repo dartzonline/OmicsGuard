@@ -3,7 +3,7 @@ import shutil
 from pathlib import Path
 from typing import Any, Dict, Optional, Union
 from urllib.parse import urlparse
-
+import os
 import requests
 import yaml
 
@@ -17,7 +17,13 @@ SCHEMA_REGISTRY = {
     "ga4gh-phenopacket-v2": "http://json-schema.org/draft-07/schema",
 }
 
-DEFAULT_CACHE_DIR = Path.home() / ".omicsguard" / "schemas"
+
+# AWS Lambda and Google Cloud Functions only allow writing to /tmp
+if os.environ.get("AWS_LAMBDA_FUNCTION_NAME") or os.environ.get("K_SERVICE"):
+    DEFAULT_CACHE_DIR = Path("/tmp") / ".omicsguard" / "schemas"
+else:
+    DEFAULT_CACHE_DIR = Path.home() / ".omicsguard" / "schemas"
+
 
 class SchemaLoader:
     """
