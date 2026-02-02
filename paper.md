@@ -20,7 +20,7 @@ bibliography: paper.bib
 
 # Summary
 
-`OmicsGuard` is a Python-based compliance engine designed to enforce "Schema-on-Write" validation for high-throughput genomic data. While the Global Alliance for Genomics and Health (GA4GH) provides standard schemas (e.g., *Phenopackets*, *Expmeta*) to define the structure of genomic metadata, enforcing these standards in distributed cloud environments remains a challenge. Generic JSON validators often lack the domain-specific reporting and remote caching strategies required for production bioinformatics pipelines, leading to "silent failures" where non-compliant data enters the data lake.
+`OmicsGuard` is a Python-based compliance engine designed to enforce "Schema-on-Write" validation for high-throughput genomic data. While the Global Alliance for Genomics and Health (GA4GH) provides standard schemas such as Phenopackets [@jacobsen2022phenopackets] and Expmeta to define the structure of genomic metadata, enforcing these standards in distributed cloud environments remains a challenge. Generic JSON validators often lack the domain-specific reporting and remote caching strategies required for production bioinformatics pipelines, leading to "silent failures" where non-compliant data enters the data lake.
 
 `OmicsGuard` bridges this gap by providing a serverless-ready CLI that not only validates JSON/YAML metadata but also manages the lifecycle of remote schemas and generates human-readable compliance reports for non-technical stakeholders. It is specifically optimized for ephemeral compute environments (e.g., AWS Lambda), where minimizing cold-start latency while maintaining strict compliance is critical.
 
