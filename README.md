@@ -1,3 +1,5 @@
+<a href="https://doi.org/10.5281/zenodo.18537186"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18537186.svg" alt="DOI"></a>
+
 # OmicsGuard
 
 [![Python application](https://github.com/dartzonline/OmicsGuard/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/dartzonline/OmicsGuard/actions/workflows/python-app.yml)
